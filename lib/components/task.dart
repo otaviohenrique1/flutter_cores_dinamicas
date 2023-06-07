@@ -30,7 +30,7 @@ class _TaskState extends State<Task> {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
-              color: Colors.blue,
+              color: Theme.of(context).primaryColor,
             ),
             height: 140,
           ),
@@ -39,7 +39,7 @@ class _TaskState extends State<Task> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.surface,
                 ),
                 height: 100,
                 child: Row(
@@ -109,7 +109,7 @@ class _TaskState extends State<Task> {
                     child: SizedBox(
                       width: 200,
                       child: LinearProgressIndicator(
-                        color: Colors.white,
+                        color: Theme.of(context).colorScheme.onPrimaryContainer,
                         value: (widget.dificuldade > 0)
                             ? (nivel / widget.dificuldade) / 10
                             : 1,
@@ -120,8 +120,8 @@ class _TaskState extends State<Task> {
                     padding: const EdgeInsets.all(12),
                     child: Text(
                       "Nivel $nivel",
-                      style: const TextStyle(
-                        color: Colors.white,
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.onPrimaryContainer,
                       ),
                     ),
                   ),
